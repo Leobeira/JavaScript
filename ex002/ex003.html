@@ -22,12 +22,36 @@
     <p>Aula 002</p>
 
     <script> /*JavaScript*/
-       var n1 = Number.parseInt(window.prompt('Digite um número: '))
-       var n2 = Number.parseInt(window.prompt('Digite outro número: '))
+       var n1 = Number.parseInt(window.prompt('Digite um número inteiro: '))
+       var n2 = Number.parseInt(window.prompt('Digite outro número inteiro: '))
        var s = n1 + n2
        window.alert('A soma dos valores é: ' + s)
+
+       var n1 = Number(window.prompt('Digite um número: '))
+       var n2 = Number(window.prompt('Digite outro número: '))
+       var s = n1 + n2
+       window.alert('A soma dos valores é: ' + s)
+       window.alert(`A soma dos valores é ${s}`) /*também podemos fazer assim*/
+       window.alert(`A soma entre ${n2} e ${n2} é de ${s}`)
     </script>
     <!--parseInt número inteiro
-        parseFloat número real-->
+        parseFloat número real
+    Porém, podemos apenas colocar Number(n) e o próprio programa se vira para fazer a soma-->
+
+    <!--Também podemos converter número para String ou vice-versa
+    String(n) ou n.toString()-->
+
+    <!--Os comandos
+        s.length diz quantos caracteres tem
+        s.toUpperCase() para deixar todas letras maiúsculas
+        s.toLowerCase() todas letras minúsculas
+    
+        Se eu quiser um número com 2 casas decimais, eu posso pedir assim:
+        var n1 = 1545.5
+        n1.toFixed(2) e ele vai aparecer 1545.50
+    
+        E para deixar o valor como moeda corrente:
+        n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+        O resultado será: R$1545.50-->
 </body>
 </html>
