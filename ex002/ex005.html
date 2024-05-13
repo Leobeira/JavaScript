@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+
+    <style>
+        body {
+            background: rgb(92, 93, 149);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+
+    <p>Aqui vai o resultado</p>
+
+    <p>Aprendendo a usar <strong>DOM</strong> em JavaScript</p>
+
+    <div id="msg">Clique em mim</div> <br>
+
+    <script>
+        var corpo = window.document.body /*para mudar a cor do body, independente se já tem a cor lá no início em Style*/
+
+        var p1 = window.document.getElementsByTagName('p')[0]/*0 é o primeiro parágrafo que aparece*/
+
+        var p2 = window.document.getElementsByTagName('p')[1]/*1 é o segundo parágrafo que aparece*/
+
+        /*var d = window.document.getElementById('msg') /*como id não tem mais de uma como no caso do parágrafo, eu não preciso colocar os colchetes para identificar tipo id1 id2, somente abro parênteses e coloco o 'msg' (Veremos no final o jeito mais prático e correto para fazer este comando.)*/
+
+        window.document.write('Está escrito assim: ' + p1.innerText)
+
+        document.write(p2.innerHTML) /*HTML difere de Text porque o primeiro já vem formatado, no caso com o DOM em strong*/
+
+        corpo.style.background = 'black' /*E assim mudo a cor do body*/
+
+        p1.style.color = 'blue' /*E assim eu mudo a cor das letras do primeiro parágrafo*/
+
+        window.alert(p2.innerText)
+
+        /*d.innerText = 'Mudei o texto' /*Neste caso eu substituí o texto original 'Clique em mim', por 'Mudei o texto'*/
+        /*Também podemos escrever o comando todo dessa maneira:
+        window.document.getElementById('msg').InnerText = 'Mudei o Texto'*/
+        /*O mais correto seria usar este caso abaixo*/
+        var d = window.document.querySelector('div#msg')
+        d.style.color = 'blue'
+       
+    </script>
+</body>
+</html>
